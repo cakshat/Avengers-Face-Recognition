@@ -38,9 +38,9 @@ The SGD optimizer has two main hyperparameters: the learning rate and the moment
 # Evaluation
 The model was trained for BATCH_SIZE = 16 and EPOCHS = 30. The model showed overall accuracy on test data 67.8%
 After evaluating accuracy per class for the entire dataset the class-wise accuracies were as follows:
-steve_rogers (Chris Evans): 84.88%
-tony_stark (Robert Downey Jr.): 67.0%
-clint_barton (Jeremy Renner): 94.0%
-bruce_banner (Mark Ruffalo): 80.0%
-thor (Chris Hemsworth): 89.0%
-Natasha_Romanoff (Scarlett Johansson): 94.0%
+1. steve_rogers (Chris Evans): 84.88%
+2. tony_stark (Robert Downey Jr.): 67.0%
+3. clint_barton (Jeremy Renner): 94.0%
+4. bruce_banner (Mark Ruffalo): 80.0%
+5. thor (Chris Hemsworth): 89.0%
+6. Natasha_Romanoff (Scarlett Johansson): 94.0%
