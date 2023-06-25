@@ -1,5 +1,5 @@
 # Avengers-Face-Recognition
-This is a neural network trained to recognize 6 Avengers characters: (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor)...sorry Nick Fury :(
+This is a neural network trained to recognize faces of 6 Avengers characters: (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor)...sorry Nick Fury :(
 
 # Compiling data
 Data was used from Kaggle. There are 6 folders of 6 people (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, Thor) each having close to 100 images. These images were then preprocessed and normalized. Normalization is a process that adjusts the values of the images so that they have a mean of 0 and a standard deviation of 1. This is important for deep learning models, as it helps to ensure that the model learns the features of the images in a consistent way.
