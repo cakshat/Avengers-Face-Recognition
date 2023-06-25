@@ -1,8 +1,8 @@
 # Avengers-Face-Recognition
-This is a neural network trained to recognize faces of 6 Avengers characters: (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor)...sorry Nick Fury :(
+This is a neural network I trained to recognize the faces of 6 Avengers characters: (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor)...sorry Nick Fury :(
 
 # Compiling data
-Data was used from Kaggle. There are 6 folders of 6 people (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, Thor) each having close to 100 images. These images were then preprocessed and normalized. Normalization is a process that adjusts the values of the images so that they have a mean of 0 and a standard deviation of 1. This is important for deep learning models, as it helps to ensure that the model learns the features of the images in a consistent way.
+Data was used from Kaggle. There are 6 folders of 6 people (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor) each having close to 100 images. These images were then preprocessed and normalized. Normalization adjusts the values of the images so that they have a mean of 0 and a standard deviation of 1. This is important for deep learning models, as it helps to ensure that the model learns the features of the images in a consistent way.
 
 The caer.preprocess_from_dir() function is used to preprocess a dataset of images from a directory.
 The to_categorical() function in the Keras library is used to convert a class vector (integers) to a binary class matrix. This is a common preprocessing step for deep learning models that use categorical cross-entropy as their loss function.
@@ -27,7 +27,7 @@ The SGD optimizer has two main hyperparameters: the learning rate and the moment
 
 # Evaluation
 
-The model was trained for BATCH_SIZE = 16 and EPOCHS = 30. After experimenting with different batch sizes and epochs these values were found to give high accuracy. 
+I experimented with different neural network structures (simple and complex) and also with different values of hyperparameters like learning rate, momentum and decay. As mentioned earlier SGD optimizer gave the best results compared to Adam and RMSprop (Adam and RMSprop showed accuracy saturation at around 18-20%). The model was trained for BATCH_SIZE = 16 and EPOCHS = 30. After experimenting with different batch sizes and epochs these values were found to give high accuracy. 
 1. Test loss: 1.72
 2. Overall accuracy on test data: 67.8%
    
@@ -38,3 +38,9 @@ After evaluating accuracy per class for the entire dataset the class-wise accura
 4. bruce_banner (Mark Ruffalo): 80.0%
 5. thor (Chris Hemsworth): 89.0%
 6. Natasha_Romanoff (Scarlett Johansson): 94.0%
+
+Thus, overall on the test set and class-wise on the entire dataset, it gives not bad results.
+
+# Further improvements
+1. Much more vast dataset would help train the model effectively. The split among train, validation, and test was around 468, 59 & 59 respectively. Hence, it was a bit difficult to get an idea of the actual accuracy of each class as in the test set each class had only about 8-10 images.
+2. Further experimentation with neural network architecture, regularization, activation functions, and hyperparameter could give more accurate model.
