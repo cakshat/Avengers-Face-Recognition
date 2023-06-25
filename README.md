@@ -4,9 +4,6 @@ This is a neural network I trained to recognize the faces of 6 Avengers characte
 # Compiling data
 Data was used from Kaggle. There are 6 folders of 6 people (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor) each having close to 100 images. These images were then preprocessed and normalized. Normalization adjusts the values of the images so that they have a mean of 0 and a standard deviation of 1. It helps to ensure that the model learns the features of the images in a consistent way.
 
-The caer.preprocess_from_dir() function was used to preprocess a dataset of images from a directory.
-The to_categorical() function in the Keras library was used to convert a class vector (integers) to a binary class matrix. This is a common preprocessing step for deep learning models that use categorical cross-entropy as their loss function.
-
 # Model
 The structure of the neural network model_c is as follows:
 
