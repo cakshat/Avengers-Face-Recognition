@@ -2,25 +2,23 @@
 This is a neural network I trained to recognize the faces of 6 Avengers characters: (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor)...sorry Nick Fury :(
 
 # Compiling data
-Data was used from Kaggle. There are 6 folders of 6 people (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor) each having close to 100 images. These images were then preprocessed and normalized. Normalization adjusts the values of the images so that they have a mean of 0 and a standard deviation of 1. It helps to ensure that the model learns the features of the images in a consistent way.
+Data was used from Kaggle. There are 6 folders of 6 people (Clint Barton, Tony Stark, Steve Rogers, Bruce Banner, Natasha Romanoff, and Thor) each having close to 100 images. These images were then preprocessed and normalized. Normalisation modifies the image values so that their mean is 0 and standard deviation is 1. It serves to ensure that the model consistently learns the features of the images.
 
 # Model
 The structure of the neural network model_c is as follows:
 
-1. Input layer: The input layer has shape (200, 200, 1), which means that it accepts a 200x200 grayscale (channels=1) image as input.
-2. Convolutional layers: The network has 6 convolutional layers, each with 64, 128, 256, 512, 512, and 512 filters, respectively. The kernel size for all of the convolutional layers is 3x3. The padding for all of the convolutional layers is the same, which means that the output of each convolutional layer has the same shape as the input. The activation function for all of the convolutional layers is ReLU.
-3. Max pooling layers: The network has 5 max-pooling layers, each with a kernel size of 2x2 and a stride of 2. The max pooling layers reduce the size of the feature maps output by the convolutional layers.
-4. Dense layers: The network has 2 dense layers, each with 1024 and 6 neurons, respectively. The activation function for the first dense layer is ReLU, and the activation function for the second dense layer is softmax. The softmax activation function is used for classification tasks, where the output of the network is a probability distribution over the possible classes.
-   
-In total, the network has 13 layers. The first 6 layers are convolutional layers, the next 5 layers are max-pooling layers, and the last 2 layers are dense layers. The network has a total of 1,251,848 parameters.
+1. Input layer: Shape -> (200, 200, 1), it accepts a 200x200 grayscale (channels=1) image as input.
+2. Convolutional layers:The network is made up of 6 convolutional layers, each of which has 64, 128, 256, 512, 512, and 512 filters. All of the convolutional layers have 3x3 kernels. All of the convolutional layers have the same padding, which means that each layer's output has the same shape as its input. All of the convolutional layers use the ReLU function as their activation function.
+3. Max pooling layers: There are 5 max-pooling layers in the network, and each one has a kernel size of 2x2 and a stride = 2. The max pooling layers make the feature maps that the convolutional layers produce smaller.
+4. Dense layers: The network has 2 dense layers, with 1024 and 6 neurons, respectively. The activation function for the first dense layer is ReLU, and the activation function for the second dense layer is softmax. The softmax activation function is used for classification tasks, where the output of the network is a probability distribution over the possible classes.
 
-The network is configured to use L2 regularization with a regularization coefficient of 0.001. L2 regularization is a technique that helps to prevent overfitting by adding a penalty to the loss function that is proportional to the square of the weights of the network.
+The network uses L2 regularization with a regularization coefficient of 0.001.
 
-The network is compiled using the SGD optimizer and the categorical cross-entropy loss function. Stochastic gradient descent (SGD) is a simple yet powerful optimization algorithm for training machine learning models. It works by iteratively updating the model's parameters in the direction of the negative gradient of the loss function.
+The network is compiled using SGD optimizer and categorical cross-entropy loss function. Stochastic gradient descent (SGD) is a simple yet powerful optimization algorithm for training machine learning models. It works by iteratively updating the model's parameters in the direction of the negative gradient of the loss function.
 
 SGD worked better than Adam and RMSprop hence it was used in this case.
 
-The SGD optimizer has two main hyperparameters: the learning rate and the momentum. The learning rate controls how large the updates to the model's parameters are. The momentum helps to prevent the optimizer from getting stuck in local minima. The categorical cross-entropy loss function is a loss function that is used for classification tasks.
+The learning rate and momentum are the two most important hyperparameters for the SGD optimizer. The learning rate determines how big the changes to the properties of the model are. The motion makes it harder for the optimizer to get stuck in a local minimum. The category cross-entropy loss function is a loss function that is used to classify things.
 
 # Evaluation
 
